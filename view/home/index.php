@@ -72,6 +72,7 @@
   <?php
     include('../assets/js/js.php');
   ?>
+  <iframe width="900" height="450" src="https://lookerstudio.google.com/embed/reporting/7501724f-cb8f-4740-9551-e7897604de38/page/9whgD" frameborder="0" style="border:0" allowfullscreen></iframe>
 </body>
 
 </html>

@@ -42,7 +42,7 @@ include("config/config.php");
 
 <body>
   <!--Container start-->
-  <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="container d-flex justify-content-center align-items-center" style="height: 100vh; text-align: center;">
     <div class="d-grid gap-2 col-6">
       <a href="view/login/index.php"><button class="btn btn-primary" type="button">Iniciar sesion</button></a>
       

@@ -1,6 +1,9 @@
 <?php
 include('../../config/config.php');
 
+$db = new Database;
+  $connect = $db->getConnect();
+  
 $sql = "CALL v_usr()";
 
 if (!$result = $connect->query($sql)) {
@@ -63,6 +66,7 @@ if (!$result = $connect->query($sql)) {
   </div>
   <?php
   include('../assets/js/js.php');
+  
   ?>
 </body>
 

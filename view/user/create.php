@@ -53,9 +53,27 @@ include("../../config/config.php");
       <!--Etiqueta h2 de titulo <h2>-->
       <h2>REGISTRAR USUARIO</h2>
 
-      <form name="formUser" method="GET" action="../../controller/user/insert.php" id="formUser" class="row">
+      <form name="formUser" method="POST" action="../../controller/user/insert.php" id="formUser" class="row">
        
         <!-- <input type="hidden" value="" id="IdUsuario" name="IdUsuario" /> -->
+
+        <div class="col-4">
+          <div class="form-floating">
+            <select class="form-select" id="TipoDocumento" name="TipoDocumento" aria-label="Floating label select example">
+              <option selected>CC</option>
+              <option selected>TI</option>
+            </select>
+            <label for="TipoDocumento">Tipo de Documento</label>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="form-floating mb-1">
+            <input type="number" class="form-control form-control-sm" id="NoDocumento" name="NoDocumento"
+              placeholder="Digitar Documento" required>
+            <label for="NoDocumento">Digitar Documento</label>
+          </div>
+        </div>
 
         <div class="col-4">
           <div class="form-floating mb-1">
@@ -75,20 +93,11 @@ include("../../config/config.php");
 
         <div class="col-4">
           <div class="form-floating mb-1">
-            <input type="number" class="form-control form-control-sm" id="NoDocumento" name="NoDocumento"
-              placeholder="Digitar Documento" required>
-            <label for="NoDocumento">Digitar Documento</label>
+            <input type="text" class="form-control form-control-sm" id="Direccion" name="Direccion"
+              placeholder="Direccion" required>
+            <label for="Direccion">Direccion</label>
           </div>
         </div>
-
-        <div class="col-4">
-          <div class="form-floating mb-1">
-            <input type="email" class="form-control form-control-sm" id="Correo" name="Correo"
-              placeholder="Digitar Correo Electrónico" required>
-            <label for="Correo">Digitar Correo Electrónico</label>
-          </div>
-        </div>
-
 
         <div class="col-4">
           <div class="form-floating mb-1">
@@ -100,41 +109,43 @@ include("../../config/config.php");
 
         <div class="col-4">
           <div class="form-floating mb-1">
+            <input type="email" class="form-control form-control-sm" id="Correo" name="Correo"
+              placeholder="Digitar Correo Electrónico" required>
+            <label for="Correo">Digitar Correo Electrónico</label>
+          </div>
+        </div>
+        
+        <div class="col-4">
+          <div class="form-floating mb-1">
             <input type="password" class="form-control form-control-sm" id="Contrasena" name="Contrasena"
               placeholder="Fecha de Nacimiento" required>
             <label for="Contrasena">Contraseña</label>
           </div>
         </div>
 
-        <div class="col-4">
+        <!-- <div class="col-4">
           <div class="form-floating mb-1">
             <input type="text" class="form-control form-control-sm" id="Estado" name="Estado"
               placeholder="Estado" required>
             <label for="Estado">Estado</label>
           </div>
+        </div> -->
+        
+        <div class="col-4">
+          <div class="form-floating">
+            <select class="form-select" id="Estado" name="Estado" aria-label="Floating label select example">
+              <option selected>Activo</option>
+              <option selected>Inactivo</option>
+            </select>
+            <label for="Estado">Estado</label>
+          </div>
         </div>
 
-        <div class="col-4" style="text-align: center">
+        <div class="col-4 text-center">
           <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
 
-        <div class="col-4">
-          <div class="form-floating">
-            <select class="form-select" id="TipoDocumento" name="TipoDocumento" aria-label="Floating label select example">
-              <option selected>CC</option>
-              <option selected>TI</option>
-            </select>
-            <label for="TipoDocumento">Tipo de Documento</label>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="form-floating mb-1">
-            <input type="text" class="form-control form-control-sm" id="Correo" name="Correo"
-              placeholder="Direccion" required>
-            <label for="Correo">Direccion</label>
-          </div>
-        </div>
+        
 
       </form>
   
@@ -152,6 +163,4 @@ include("../../config/config.php");
 </body>
 
 </html>
-<?php
-$connect->close();
-?>
+<!--  -->
